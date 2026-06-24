@@ -10,11 +10,14 @@ package clases;
  */
 public class Refugio extends javax.swing.JFrame {
 
+    OperacionesVisual op;
+
     /**
      * Creates new form Veterinaria
      */
     public Refugio() {
         initComponents();
+        op = new OperacionesVisual();
     }
 
     /**
@@ -26,46 +29,124 @@ public class Refugio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        escritorio = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         RegistrarPerro = new javax.swing.JMenuItem();
         MostrarPerro = new javax.swing.JMenuItem();
+        adoptarPerro = new javax.swing.JMenuItem();
+        revisionPerro = new javax.swing.JMenuItem();
         MostrarGato = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        registrarGato = new javax.swing.JMenuItem();
+        mostrarGato = new javax.swing.JMenuItem();
+        adoptarGato = new javax.swing.JMenuItem();
+        revisionGato = new javax.swing.JMenuItem();
         MostrarAdop = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        registrarAdop = new javax.swing.JMenuItem();
+        mostrarAdop = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
+        escritorio.setLayout(escritorioLayout);
+        escritorioLayout.setHorizontalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 495, Short.MAX_VALUE)
+        );
+        escritorioLayout.setVerticalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 366, Short.MAX_VALUE)
+        );
 
         jMenu1.setText("Perro");
 
         RegistrarPerro.setText("Registrar");
+        RegistrarPerro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarPerroActionPerformed(evt);
+            }
+        });
         jMenu1.add(RegistrarPerro);
 
         MostrarPerro.setText("Mostrar");
+        MostrarPerro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MostrarPerroActionPerformed(evt);
+            }
+        });
         jMenu1.add(MostrarPerro);
+
+        adoptarPerro.setText("Adoptar");
+        adoptarPerro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adoptarPerroActionPerformed(evt);
+            }
+        });
+        jMenu1.add(adoptarPerro);
+
+        revisionPerro.setText("Revision");
+        revisionPerro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                revisionPerroActionPerformed(evt);
+            }
+        });
+        jMenu1.add(revisionPerro);
 
         jMenuBar1.add(jMenu1);
 
         MostrarGato.setText("Gato");
 
-        jMenuItem2.setText("Registrar");
-        MostrarGato.add(jMenuItem2);
+        registrarGato.setText("Registrar");
+        registrarGato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registrarGatoActionPerformed(evt);
+            }
+        });
+        MostrarGato.add(registrarGato);
 
-        jMenuItem3.setText("Mostrar");
-        MostrarGato.add(jMenuItem3);
+        mostrarGato.setText("Mostrar");
+        mostrarGato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrarGatoActionPerformed(evt);
+            }
+        });
+        MostrarGato.add(mostrarGato);
+
+        adoptarGato.setText("Adoptar");
+        adoptarGato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adoptarGatoActionPerformed(evt);
+            }
+        });
+        MostrarGato.add(adoptarGato);
+
+        revisionGato.setText("Revision");
+        revisionGato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                revisionGatoActionPerformed(evt);
+            }
+        });
+        MostrarGato.add(revisionGato);
 
         jMenuBar1.add(MostrarGato);
 
         MostrarAdop.setText("Adoptante");
 
-        jMenuItem1.setText("Registrar");
-        MostrarAdop.add(jMenuItem1);
+        registrarAdop.setText("Registrar");
+        registrarAdop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registrarAdopActionPerformed(evt);
+            }
+        });
+        MostrarAdop.add(registrarAdop);
 
-        jMenuItem4.setText("Mostrar");
-        MostrarAdop.add(jMenuItem4);
+        mostrarAdop.setText("Mostrar");
+        mostrarAdop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrarAdopActionPerformed(evt);
+            }
+        });
+        MostrarAdop.add(mostrarAdop);
 
         jMenuBar1.add(MostrarAdop);
 
@@ -75,15 +156,98 @@ public class Refugio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 501, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 366, Short.MAX_VALUE)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RegistrarPerroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarPerroActionPerformed
+        RegistrarPerro registrar = new RegistrarPerro();
+        registrar.setObj(op);
+        escritorio.add(registrar);
+        registrar.show();
+    }//GEN-LAST:event_RegistrarPerroActionPerformed
+
+    private void registrarGatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarGatoActionPerformed
+        RegistrarGato registrar = new RegistrarGato();
+        registrar.setObj(op);
+        escritorio.add(registrar);
+        registrar.show();// TODO add your handling code here:
+    }//GEN-LAST:event_registrarGatoActionPerformed
+
+    private void registrarAdopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarAdopActionPerformed
+        RegistrarAdoptante registrar = new RegistrarAdoptante();
+        registrar.setObj(op);
+        escritorio.add(registrar);
+        registrar.show();
+    }//GEN-LAST:event_registrarAdopActionPerformed
+
+    private void MostrarPerroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarPerroActionPerformed
+        MostrarPerros mostrar = new MostrarPerros();
+        mostrar.setObj(op);
+        //llamando al metodo
+        mostrar.mostrarDatos();
+        escritorio.add(mostrar);
+        mostrar.show();
+    }//GEN-LAST:event_MostrarPerroActionPerformed
+
+    private void mostrarGatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarGatoActionPerformed
+        MostrarGatos mostrar = new MostrarGatos();
+        mostrar.setObj(op);
+        //llamando al metodo
+        mostrar.mostrarDatos();
+        escritorio.add(mostrar);
+        mostrar.show();
+    }//GEN-LAST:event_mostrarGatoActionPerformed
+
+    private void mostrarAdopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarAdopActionPerformed
+        MostrarAdoptante mostrar = new MostrarAdoptante();
+        mostrar.setObj(op);
+        //llamando al metodo
+        mostrar.mostrarDatos();
+        escritorio.add(mostrar);
+        mostrar.show();
+    }//GEN-LAST:event_mostrarAdopActionPerformed
+
+    private void adoptarPerroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adoptarPerroActionPerformed
+        AdoptarPerro adoptar = new AdoptarPerro();
+        adoptar.setObj(op);
+        //llamando al metodo
+        adoptar.mostrarPerrosDisponibles();
+        escritorio.add(adoptar);
+        adoptar.show();
+    }//GEN-LAST:event_adoptarPerroActionPerformed
+
+    private void adoptarGatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adoptarGatoActionPerformed
+        AdoptarGato adoptar = new AdoptarGato();
+        adoptar.setObj(op);
+        adoptar.mostrarGatosDisponibles();
+        escritorio.add(adoptar);
+        adoptar.show();
+    }//GEN-LAST:event_adoptarGatoActionPerformed
+
+    private void revisionPerroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revisionPerroActionPerformed
+        GestionarRevisionPerro revision = new GestionarRevisionPerro();
+        revision.setObj(op);
+        revision.mostrarPerros();
+        escritorio.add(revision);
+        revision.show();
+    }//GEN-LAST:event_revisionPerroActionPerformed
+
+    private void revisionGatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revisionGatoActionPerformed
+        GestionarRevisionGato revision = new GestionarRevisionGato();
+        revision.setObj(op);
+        revision.mostrarGatos();
+        escritorio.add(revision);
+        revision.show();
+    }//GEN-LAST:event_revisionGatoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,11 +290,16 @@ public class Refugio extends javax.swing.JFrame {
     private javax.swing.JMenu MostrarGato;
     private javax.swing.JMenuItem MostrarPerro;
     private javax.swing.JMenuItem RegistrarPerro;
+    private javax.swing.JMenuItem adoptarGato;
+    private javax.swing.JMenuItem adoptarPerro;
+    private javax.swing.JPanel escritorio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem mostrarAdop;
+    private javax.swing.JMenuItem mostrarGato;
+    private javax.swing.JMenuItem registrarAdop;
+    private javax.swing.JMenuItem registrarGato;
+    private javax.swing.JMenuItem revisionGato;
+    private javax.swing.JMenuItem revisionPerro;
     // End of variables declaration//GEN-END:variables
 }

@@ -33,7 +33,7 @@ public class MostrarAdoptante extends javax.swing.JInternalFrame {
         initComponents();
     }
     
-   public void mostrarDatosAdoptantes() {
+   public void mostrarDatos() {
     int f = 0;
     // Capturamos la lista específica de adoptantes
     listaAdoptantes = obj.getListaAdoptantes();

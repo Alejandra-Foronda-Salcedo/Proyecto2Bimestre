@@ -69,24 +69,41 @@ public class RegistrarGato extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        setBackground(new java.awt.Color(255, 153, 153));
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
 
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 51, 0));
         jLabel1.setText("REGISTRAR GATO");
 
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 51, 0));
         jLabel2.setText("ID: ");
 
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 51, 0));
         jLabel3.setText("NOMBRE:");
 
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 51, 0));
         jLabel4.setText("EDAD: ");
 
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 51, 0));
         jLabel5.setText("COMPORTAMIENTO: ");
 
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 51, 0));
         jLabel6.setText("PELAJE:");
 
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 51, 0));
         jLabel7.setText("ESTADO DE SALUD:");
 
+        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 51, 0));
         jLabel8.setText("¿PUEDE SER ADOPTADO?");
 
         pelajeCmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Corto", "Largo", "Semilargo", "Sin Pelo (Esfinge)" }));
@@ -157,7 +174,7 @@ public class RegistrarGato extends javax.swing.JInternalFrame {
                         .addComponent(registrarBtn)
                         .addGap(138, 138, 138)
                         .addComponent(limpiarBtn)))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +211,7 @@ public class RegistrarGato extends javax.swing.JInternalFrame {
                     .addComponent(siRb)
                     .addComponent(noRb))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(msjLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(msjLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(registrarBtn)

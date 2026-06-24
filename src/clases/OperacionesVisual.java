@@ -61,27 +61,31 @@ public class OperacionesVisual {
     }
 
     /**
-     * Ejecuta de forma polimórfica la revisión médica y actualiza el estado de
-     * salud en la lista
+     * Procesa la revisión médica de un animal buscando por ID, ejecutando la
+     * interfaz y cambiando su disponibilidad si se recupera.
      */
     public boolean procesarRevisionMedica(String idAnimal, String nuevoEstado) {
         Animal animal = buscarAnimalPorId(idAnimal);
 
         if (animal != null) {
-            // 1. Verificación Polimórfica: ¿Implementa la interfaz RevisionMedica?
+            // Verificación Polimórfica de la interfaz
             if (animal instanceof RevisionMedica) {
-                // Se ejecuta el método obligatorio de la interfaz
                 ((RevisionMedica) animal).registrarChequeo();
 
-                // 2. Modificamos el atributo del objeto directamente
+                // Cambiamos el estado de salud
                 animal.setEstadoSalud(nuevoEstado);
-                return true; // Operación exitosa
-            } else {
-                System.out.println("Este animal no requiere revisión bajo la interfaz.");
-                return false;
+
+                // NUEVA REGLA: Si la salud pasa a ser "Saludable", se habilita para adopción
+                if (nuevoEstado.equalsIgnoreCase("Saludable")) {
+                    animal.setDisponible(true);
+                }else{
+                    animal.setDisponible(false);
+                }
+
+                return true;
             }
         }
-        return false; // Animal no encontrado
+        return false;
     }
 
     public List<Animal> getListaAnimales() {

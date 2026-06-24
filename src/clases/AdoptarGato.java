@@ -82,14 +82,23 @@ public class AdoptarGato extends javax.swing.JInternalFrame {
         btnAdoptar = new javax.swing.JButton();
         msjLbl = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 153));
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 51, 0));
         jLabel1.setText("ADOPTAR UN GATO");
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 51, 0));
         jLabel2.setText("CI: ");
 
+        tablaPerrosDispo.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        tablaPerrosDispo.setForeground(new java.awt.Color(255, 204, 102));
         tablaPerrosDispo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -103,6 +112,9 @@ public class AdoptarGato extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(tablaPerrosDispo);
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 51, 0));
         jLabel3.setText("ID:");
 
         txtIdAnimal.addActionListener(new java.awt.event.ActionListener() {
@@ -111,12 +123,17 @@ public class AdoptarGato extends javax.swing.JInternalFrame {
             }
         });
 
+        btnAdoptar.setBackground(new java.awt.Color(204, 51, 0));
+        btnAdoptar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btnAdoptar.setForeground(new java.awt.Color(255, 255, 255));
         btnAdoptar.setText("ADOPTAR");
         btnAdoptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdoptarActionPerformed(evt);
             }
         });
+
+        msjLbl.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,9 +150,6 @@ public class AdoptarGato extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(jLabel2)
                         .addGap(35, 35, 35)
@@ -145,7 +159,10 @@ public class AdoptarGato extends javax.swing.JInternalFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(106, 106, 106)
-                        .addComponent(msjLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(msjLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(205, 205, 205)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -166,7 +183,7 @@ public class AdoptarGato extends javax.swing.JInternalFrame {
                     .addComponent(btnAdoptar))
                 .addGap(18, 18, 18)
                 .addComponent(msjLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
